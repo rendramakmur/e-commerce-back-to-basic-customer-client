@@ -23,6 +23,10 @@ a {
   font-weight: 500;
 }
 
+a:hover {
+  color: #DB382D;
+}
+
 .color-red {
   color: #DB382D !important;
 }
@@ -93,7 +97,7 @@ a {
 }
 
 .medium-btn {
-  padding: 8px;
+  padding: 8px 20px;
   background-color: #F8F9FA;
   border-radius: 5px;
   font-size: 14px;
@@ -109,7 +113,7 @@ a {
   fill: #DB382D;
 }
 
-.card:hover {
+.card-product:hover {
   border: 1px solid #353535;
 }
 

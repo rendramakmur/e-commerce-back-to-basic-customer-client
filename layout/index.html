@@ -8,15 +8,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
-  <title>BackToBasic</title>
+  <title>Back to Basic</title>
 </head>
 <body>
   <div id="app">
 
     <!-- Start Navbar -->
     <nav id="navbar">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
+        <div class="container-fluid mx-4">
           <a class="navbar-brand bold" href="#">BTB</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -48,9 +48,147 @@
     </nav>
     <!-- End Navbar -->
 
+    <!-- Start Cart Container -->
+    <div id="Carts" style="margin-top: 120px;">
+      <h1 class="text-center my-5">Carts</h1>
+      <div class="container-fluid my-5">
+        <div class="row">
+
+          <!-- Start Carts Column Container -->
+          <div class="col-sm-6 overflow-auto" style="height: 100vh;">
+
+            <!-- Start Cart Card -->
+            <div class="card mb-3 mx-5" style="max-width: 32rem; margin: 0 20px;">
+              <div class="row">
+                <div class="col-4">
+                  <img src="https://m.media-amazon.com/images/I/61BspTROFjL._AC_SY550_.jpg" class="card-img my-3 mx-3">
+                </div>
+                <div class="col-8">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Card title</h5>
+                    <div class="text-center">
+                      <p class="very-small-text">Price: Rp. 575.000</p>
+                    </div>
+                    <div class="my-2 d-flex justify-content-center">
+                      <select class="form-select form-select-sm" style="width: 10rem;">
+                        <option value="">Quantity</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                      <div class="row col-sm-7">
+                        <a href="#" class="small-btn shadow text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-x">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                          </svg>
+                          Remove from cart
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Cart Card -->
+            
+          </div>
+          <!-- End Carts Column Container -->
+
+          <!-- Start Checkout Form Column Container-->
+          <div class="col-sm-6">
+            <div class="mx-3">
+              <h3>Checkout Form</h3>
+            </div>
+          </div>
+          <!-- End Checkout Form Column Container -->
+
+        </div>
+      </div>
+    </div>
+    <!-- End Cart Container -->
+
+    <!-- Start Login -->
+    <div id="login" style="margin-top: 60px;">
+      <div class="container-fluid">
+        <div class="row justify-content-center align-items-center" style="height: 100vh;">
+          <div class="col-sm-4">
+            <div class="col-12">
+              <div class="my-4">
+                <h1 class="text-center">Back to Basic</h1>
+              </div>
+              <div class="card shadow mx-5">
+                <div class="card-body">
+                  <h3 class="text-center my-3">Login</h3>
+
+                  <div class="col-8 offset-2">
+                    <label for="email" class="very-small-text">Email</label>
+                    <input class="form-control form-control-dm mb-3" id="email" type="email" placeholder="Email">
+                  </div>
+
+                  <div class="col-8 offset-2">
+                    <label for="password" class="very-small-text">Password</label>
+                    <input class="form-control form-control-dm mb-3" id="password" type="password" placeholder="Password">
+                  </div>
+
+                  <div class="d-flex justify-content-center my-3">
+                    <a href="#" class="medium-btn shadow">Sign In</a>
+                  </div>
+
+                  <div class="d-flex justify-content-center my-4">
+                    <a href="#" class="very-small-text">Not have an account? Register here</a>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Login -->
+
+    <!-- Start Register -->
+    <div id="Register" style="margin-top: 60px;">
+      <div class="container-fluid">
+        <div class="row justify-content-center align-items-center" style="height: 100vh;">
+          <div class="col-sm-4">
+            <div class="col-12">
+              <div class="card shadow mx-5">
+                <div class="card-body">
+                  <h3 class="text-center my-3">Register</h3>
+
+                  <div class="col-8 offset-2">
+                    <label for="email" class="very-small-text">Full name</label>
+                    <input class="form-control form-control-dm mb-3" id="email" type="text" placeholder="Full name">
+                  </div>
+
+                  <div class="col-8 offset-2">
+                    <label for="email" class="very-small-text">Email</label>
+                    <input class="form-control form-control-dm mb-3" id="email" type="email" placeholder="Email">
+                  </div>
+
+                  <div class="col-8 offset-2">
+                    <label for="password" class="very-small-text">Password</label>
+                    <input class="form-control form-control-dm mb-3" id="password" type="password" placeholder="Password">
+                  </div>
+
+                  <div class="d-flex justify-content-center my-4">
+                    <a href="#" class="medium-btn shadow">Register</a>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Register -->
 
     <!-- Start Carousel -->
-    <div id="carousel">
+    <div id="carousel" style="margin-top: 60px;">
       <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <!-- Carousel Item -->
@@ -78,15 +216,15 @@
 
     <!-- Start Product Container -->
     <div id="products">
-      <h1 class="text-center my-5">Our Products</h1>
+      <h1 class="text-center my-5">Products</h1>
       <div class="container-fluid my-5">
         <div class="row d-flex justify-content-center">
 
           <!-- Start Product Card -->
-          <div class="card mx-3 my-3" style="width: 18rem;">
+          <div class="card card-product mx-3 my-3" style="width: 15rem;">
             <img src="https://m.media-amazon.com/images/I/61BspTROFjL._AC_SY550_.jpg" class="card-img-top my-3">
             <div class="card-body">
-              <h5 class="card-title text-center">Card title</h5>
+              <h6 class="card-title text-center">Card title</h6>
               <p class="text-center very-small-text my-2">Rp. 575.000</p>
               <p class="text-center very-small-text my-2" style="color: #DB382D;">10 items left in stock!</p>
               <div class="row">
@@ -97,10 +235,10 @@
           <!-- End Product Card -->
 
           <!-- Start Product Card -->
-          <div class="card mx-3 my-3" style="width: 18rem;">
+          <div class="card card-product mx-3 my-3" style="width: 15rem;">
             <img src="https://static.footshop.com/271390-full_product/181.jpg" class="card-img-top my-3">
             <div class="card-body">
-              <h5 class="card-title text-center">Card title</h5>
+              <h6 class="card-title text-center">Card title</h6>
               <p class="text-center very-small-text my-2">Rp. 575.000</p>
               <p class="text-center very-small-text my-2" style="color: #DB382D;">5 items left in stock!</p>
               <div class="row">
@@ -111,10 +249,10 @@
           <!-- End Product Card -->
 
           <!-- Start Product Card -->
-          <div class="card mx-3 my-3" style="width: 18rem;">
+          <div class="card card-product mx-3 my-3" style="width: 15rem;">
             <img src="https://www.allbasicstore.com/wp-content/uploads/2018/12/cream.jpg" class="card-img-top my-3">
             <div class="card-body">
-              <h5 class="card-title text-center">Card title</h5>
+              <h6 class="card-title text-center">Card title</h6>
               <p class="text-center very-small-text my-2">Rp. 575.000</p>
               <p class="text-center very-small-text my-2" style="color: #DB382D;">20 items left in stock!</p>
               <div class="row">

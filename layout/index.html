@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>BackToBasic</title>
+</head>
+<body>
+  <div id="app">
+
+    <!-- Start Navbar -->
+    <nav id="navbar">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand bold" href="#">BTB</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="ms-auto">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><img class="mb-2 mx-1" src="./assets/cart2.svg" alt="Bootstrap" width="18" height="18">Shop</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><img class="mb-2 mx-1" src="./assets/bag.svg" alt="Bootstrap" width="18" height="18">Carts</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img class="mb-2 mx-1" src="./assets/person.svg" alt="Bootstrap" width="20" height="20">
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Login</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                    <li><a class="dropdown-item" href="#">Register</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </nav>
+    <!-- End Navbar -->
+
+
+    <!-- Start Carousel -->
+    <div id="carousel">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Carousel Item -->
+          <div class="carousel-item active">
+            <img src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2021/3/22/37bd438a-56d4-40e4-afbd-b137c11e1622.jpg" class="d-block w-100">
+          </div>
+          <!-- Carousel Item -->
+
+          <div class="carousel-item">
+            <img src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2021/3/22/5edd6400-b4a3-46d0-85f2-aed21aa03e43.jpg" class="d-block w-100">
+          </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!-- End Carousel -->
+
+    <!-- Start Product Container -->
+    <div id="products">
+      <h1 class="text-center my-5">Our Products</h1>
+      <div class="container-fluid my-5">
+        <div class="row d-flex justify-content-center">
+
+          <!-- Start Product Card -->
+          <div class="card mx-3 my-3" style="width: 18rem;">
+            <img src="https://m.media-amazon.com/images/I/61BspTROFjL._AC_SY550_.jpg" class="card-img-top my-3">
+            <div class="card-body">
+              <h5 class="card-title text-center">Card title</h5>
+              <p class="text-center very-small-text my-2">Rp. 575.000</p>
+              <p class="text-center very-small-text my-2" style="color: #DB382D;">10 items left in stock!</p>
+              <div class="row">
+                <a href="#" class="small-btn shadow text-center">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+          <!-- End Product Card -->
+
+          <!-- Start Product Card -->
+          <div class="card mx-3 my-3" style="width: 18rem;">
+            <img src="https://static.footshop.com/271390-full_product/181.jpg" class="card-img-top my-3">
+            <div class="card-body">
+              <h5 class="card-title text-center">Card title</h5>
+              <p class="text-center very-small-text my-2">Rp. 575.000</p>
+              <p class="text-center very-small-text my-2" style="color: #DB382D;">5 items left in stock!</p>
+              <div class="row">
+                <a href="#" class="small-btn shadow text-center">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+          <!-- End Product Card -->
+
+          <!-- Start Product Card -->
+          <div class="card mx-3 my-3" style="width: 18rem;">
+            <img src="https://www.allbasicstore.com/wp-content/uploads/2018/12/cream.jpg" class="card-img-top my-3">
+            <div class="card-body">
+              <h5 class="card-title text-center">Card title</h5>
+              <p class="text-center very-small-text my-2">Rp. 575.000</p>
+              <p class="text-center very-small-text my-2" style="color: #DB382D;">20 items left in stock!</p>
+              <div class="row">
+                <a href="#" class="small-btn shadow text-center">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+          <!-- End Product Card -->
+
+        </div>
+      </div>
+    </div>
+    <!-- End Product Container -->
+
+    <footer>
+      <div class="d-flex justify-content-center" style="height: 80px;">
+        <div class="row align-content-center flex-wrap">
+          <p class="text-center very-small-text">© Developed by Rendra</p>
+        </div>
+        <div class="row align-content-center flex-wrap">
+          <a style="color: white;" href="https://github.com/rendramakmur" target="_blank"><i class="bi bi-github mx-2"></i></a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>

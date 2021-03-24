@@ -3,7 +3,7 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2021/3/16/b0d76433-0a53-426c-b081-a8bdb8f6dd1f.jpg" class="d-block w-100">
+          <img src="https://firebasestorage.googleapis.com/v0/b/backtobasic-ecommerce.appspot.com/o/BTB-Welcome-Banner.jpg?alt=media&token=a6c79439-d49b-41b8-bebf-9b022c5ea80a" class="d-block w-100">
         </div>
         <Banner v-for="banner in filterActiveBanners" :key="banner.id" :banner="banner"></Banner>
       </div>

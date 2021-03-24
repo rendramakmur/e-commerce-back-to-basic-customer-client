@@ -6,7 +6,7 @@
 
         <!-- Start Carts Column Container -->
         <div class="col-sm-6 overflow-auto" style="height: 100vh;">
-          <CartCard></CartCard>
+          <CartCard v-for="cart in carts" :key="cart.id" :cart="cart"></CartCard>
         </div>
         <!-- End Carts Column Container -->
 
@@ -24,12 +24,24 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import CartCard from '../components/CartCard'
 
 export default {
-  name: 'Cart Page',
+  name: 'CartPage',
   components: {
     CartCard
+  },
+  methods: {
+    fetchCarts () {
+      this.$store.dispatch('fetchCarts')
+    }
+  },
+  computed: {
+    ...mapState(['carts'])
+  },
+  created () {
+    this.fetchCarts()
   }
 }
 </script>

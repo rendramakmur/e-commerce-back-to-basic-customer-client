@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from '../axios'
 import router from '../router'
+import Swal from 'sweetalert2'
 
 Vue.use(Vuex)
 
@@ -31,22 +32,48 @@ export default new Vuex.Store({
       axios.post('/login', payload)
         .then(({ data }) => {
           localStorage.access_token = data.access_token
-          router.push('/')
           context.commit('CHANGE_IS_LOGIN', true)
+          router.push('/')
         })
         .catch(err => {
-          console.log(err.response.data)
+          Swal.fire({
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            width: 400,
+            timer: 2500,
+            timerProgressBar: true,
+            icon: 'error',
+            title: err.response.data.message
+          })
         })
     },
     register (context, payload) {
       axios.post('/register', payload)
         .then(({ data }) => {
-          // Swal success Register
-          console.log(data)
+          Swal.fire({
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            width: 400,
+            timer: 2500,
+            timerProgressBar: true,
+            icon: 'success',
+            title: `Register success, welcome ${data.full_name}`
+          })
           router.push('/login')
         })
         .catch(err => {
-          console.log(err.response.data)
+          Swal.fire({
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            width: 400,
+            timer: 2500,
+            timerProgressBar: true,
+            icon: 'error',
+            title: err.response.data.errors.join('\n')
+          })
         })
     },
     fetchProducts (context, payload) {
@@ -83,7 +110,6 @@ export default new Vuex.Store({
       })
         .then(({ data }) => {
           context.commit('CHANGE_CARTS', data)
-          console.log(context.state.carts, 'fetchCarts')
         })
         .catch(err => {
           console.log(err.response.data)
@@ -98,8 +124,16 @@ export default new Vuex.Store({
         }
       })
         .then(({ data }) => {
-          // Swal success change quanitity
-          console.log(data)
+          Swal.fire({
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            width: 400,
+            timer: 2500,
+            timerProgressBar: true,
+            icon: 'success',
+            title: `Quantity is changed to ${data.quantity}`
+          })
           context.dispatch('fetchCarts')
         })
         .catch(err => {
@@ -113,8 +147,16 @@ export default new Vuex.Store({
         }
       })
         .then(({ data }) => {
-          // Swal remove item done
-          console.log(data)
+          Swal.fire({
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            width: 400,
+            timer: 2500,
+            timerProgressBar: true,
+            icon: 'success',
+            title: data.message
+          })
           context.dispatch('fetchCarts')
         })
         .catch(err => {
@@ -128,12 +170,29 @@ export default new Vuex.Store({
         }
       })
         .then(({ data }) => {
-          // Swal succes add to cart
-          console.log(data)
+          Swal.fire({
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            width: 400,
+            timer: 2500,
+            timerProgressBar: true,
+            icon: 'success',
+            title: 'Item success added on your cart'
+          })
           context.dispatch('fetchCarts')
         })
         .catch(err => {
-          console.log(err.response.data)
+          Swal.fire({
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            width: 400,
+            timer: 2500,
+            timerProgressBar: true,
+            icon: 'error',
+            title: err.response.data.message
+          })
         })
     }
   }

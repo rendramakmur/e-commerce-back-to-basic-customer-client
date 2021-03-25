@@ -5,7 +5,10 @@
       <div class="row">
 
         <!-- Start Carts Column Container -->
-        <div class="col-sm-6 overflow-auto" style="height: 100vh;">
+        <div v-if="carts.length === 0" class="col-sm-6 overflow-auto" style="height: 100vh;">
+          <router-link to="/"><h5 class="text-center">Your cart is empty, click here to start shopping.</h5></router-link>
+        </div>
+        <div v-else class="col-sm-6 overflow-auto" style="height: 100vh;">
           <CartCard v-for="cart in carts" :key="cart.id" :cart="cart"></CartCard>
         </div>
         <!-- End Carts Column Container -->

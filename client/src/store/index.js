@@ -183,16 +183,29 @@ export default new Vuex.Store({
           context.dispatch('fetchCarts')
         })
         .catch(err => {
-          Swal.fire({
-            toast: true,
-            position: 'top',
-            showConfirmButton: false,
-            width: 400,
-            timer: 2500,
-            timerProgressBar: true,
-            icon: 'error',
-            title: err.response.data.message
-          })
+          if (localStorage.access_token) {
+            Swal.fire({
+              toast: true,
+              position: 'top',
+              showConfirmButton: false,
+              width: 400,
+              timer: 2500,
+              timerProgressBar: true,
+              icon: 'error',
+              title: err.response.data.message
+            })
+          } else {
+            router.push('/login')
+            Swal.fire({
+              toast: true,
+              position: 'top',
+              showConfirmButton: false,
+              width: 400,
+              timer: 2500,
+              timerProgressBar: true,
+              title: 'Please login first'
+            })
+          }
         })
     }
   }
